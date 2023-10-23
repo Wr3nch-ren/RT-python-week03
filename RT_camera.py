@@ -67,7 +67,7 @@ class Camera:
         scale = 1.0
 
         # scaling with samples_per_pixel
-        scale = 1.0/self.samples_per_pixel
+        scale = 1.0
     
         r = cPixelColor.r()*scale
         g = cPixelColor.g()*scale

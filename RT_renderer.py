@@ -40,16 +40,13 @@ class Renderer():
 
                 pixel_color = rtu.Color(0,0,0)
                 # shoot a ray at the pixel center
-                # generated_ray = self.camera.get_center_ray(i, j)
+
 
                 # shoot a ray at a random location inside the pixel
-                # generated_ray = self.camera.get_ray(i, j)
-                # pixel_color = get_color(generated_ray)
+
 
                 # shoot multiple rays at random locations inside the pixel
-                for spp in range(self.camera.samples_per_pixel):
-                    generated_ray = self.camera.get_ray(i, j)
-                    pixel_color = pixel_color + get_color(generated_ray)
+
 
                 self.camera.write_to_film(i, j, pixel_color)
 
