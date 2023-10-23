@@ -5,13 +5,13 @@ This repository is for 'Raytracing in Entertainment Industry' (01418283).
 This course is set to be taught for undergrad students at Dept of Computer Science, Faculty of Science, Kasetsart University.
 The codes were rewritten and modified from https://raytracing.github.io/books/RayTracingInOneWeekend.html#thevec3class/colorutilityfunctions.
 
-Prerequisites :
+**Prerequisites :**
 1. C/C++ or python.
 2. Object-Oriented Programming (OOP).
 3. Linear algebra for undergrad students.
 
 
-Class assignment
+**Class assignment**
 
 1. Modify 'find_intersection()' to render a square with various sizes and locations using different 't' and 'Interval'. 
 2. Modify 'find_intersection()' to render 3 squares with various sizes and locations.
