@@ -63,7 +63,11 @@ class Camera:
         self.Lens = Thinlens(fDefocusAngle, fFocusDist)
 
     def write_to_film(self, widthId, heightId, cPixelColor):
+        # no scaling
         scale = 1.0
+
+        # scaling with samples_per_pixel
+        scale = 1.0/self.samples_per_pixel
     
         r = cPixelColor.r()*scale
         g = cPixelColor.g()*scale

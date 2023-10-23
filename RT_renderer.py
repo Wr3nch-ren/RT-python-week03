@@ -4,10 +4,28 @@ import RT_utility as rtu
 import numpy as np
 from PIL import Image as im
 
+def find_intersection(rGen_ray, iInterval):
+
+    t = 2.0
+    iInterval = rtu.Interval(-3.0,3.0)
+    if (iInterval.surrounds(rGen_ray.at(t).x())):
+        if (iInterval.surrounds(rGen_ray.at(t).y())):
+            return True
+
+    return False
+
 def background_color(rGen_ray):
     unit_direction = rtu.Vec3.unit_vector(rGen_ray.getDirection())
     a = (unit_direction.y() + 1.0)*0.5
     return rtu.Color(1,1,1)*(1.0-a) + rtu.Color(0.5, 0.7, 1.0)*a
+
+def get_color(rGen_ray):
+
+    found_hit = find_intersection(rGen_ray, rtu.Interval(-3.0,3.0))
+    if found_hit == True:
+        return rtu.Color(1,0,0)
+
+    return background_color(rGen_ray)
 
 class Renderer():
 
@@ -21,8 +39,17 @@ class Renderer():
             for i in range(self.camera.img_width):
 
                 pixel_color = rtu.Color(0,0,0)
-                generated_ray = self.camera.get_center_ray(i, j)
-                pixel_color = background_color(generated_ray)
+                # shoot a ray at the pixel center
+                # generated_ray = self.camera.get_center_ray(i, j)
+
+                # shoot a ray at a random location inside the pixel
+                # generated_ray = self.camera.get_ray(i, j)
+                # pixel_color = get_color(generated_ray)
+
+                # shoot multiple rays at random locations inside the pixel
+                for spp in range(self.camera.samples_per_pixel):
+                    generated_ray = self.camera.get_ray(i, j)
+                    pixel_color = pixel_color + get_color(generated_ray)
 
                 self.camera.write_to_film(i, j, pixel_color)
 
