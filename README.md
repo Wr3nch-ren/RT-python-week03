@@ -3,7 +3,7 @@ Ray tracing course week 03
 
 This repository is for 'Raytracing in Entertainment Industry' (01418283).
 This course is set to be taught for undergrad students at Dept of Computer Science, Faculty of Science, Kasetsart University.
-The codes were rewritten and modified from https://raytracing.github.io/books/RayTracingInOneWeekend.html#thevec3class/colorutilityfunctions.
+The codes were rewritten and modified from https://raytracing.github.io/books/RayTracingInOneWeekend.html.
 
 **Prerequisites :**
 1. C/C++ or python.
