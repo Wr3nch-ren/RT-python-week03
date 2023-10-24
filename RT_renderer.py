@@ -6,6 +6,7 @@ from PIL import Image as im
 
 def find_intersection(rGen_ray, iInterval):
 
+    #(1.),(2.) Edit codes here 
     t = 2.0
     iInterval = rtu.Interval(-3.0,3.0)
     if (iInterval.surrounds(rGen_ray.at(t).x())):
@@ -39,13 +40,13 @@ class Renderer():
             for i in range(self.camera.img_width):
 
                 pixel_color = rtu.Color(0,0,0)
-                # shoot a ray at the pixel center
+                # (1.),(2.)shoot a ray at the pixel center
 
 
-                # shoot a ray at a random location inside the pixel
+                # (3.)shoot a ray at a random location inside the pixel
 
 
-                # shoot multiple rays at random locations inside the pixel
+                # (4.)shoot multiple rays at random locations inside the pixel
 
 
                 self.camera.write_to_film(i, j, pixel_color)
