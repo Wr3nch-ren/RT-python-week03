@@ -41,7 +41,7 @@ class Renderer():
 
                 pixel_color = rtu.Color(0,0,0)
                 # (1.),(2.)shoot a ray at the pixel center
-
+                generated_ray = self.camera.get_center_ray(i, j)
 
                 # (3.)shoot a ray at a random location inside the pixel
 
