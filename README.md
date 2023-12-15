@@ -17,4 +17,4 @@ The codes were rewritten and modified from https://raytracing.github.io/books/Ra
 2. Modify 'find_intersection()' to render 3 squares with various sizes and locations.
 3. Replace 'get_center_ray()' with 'get_ray()'. Explain the differences between (2.) and (3.).
 4. Generate random rays at the same pixel using 'get_ray()' and 'samples_per_pixel'. The result from 'get_color()' is then accumulated to 'pixel_color' and scaled in 'write_to_film()'. See the difference between (3.) and (4.).
-
+5. Draw Class diagram of the codes.
