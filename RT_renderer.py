@@ -51,7 +51,7 @@ class Renderer():
 
                 # (4.)shoot multiple rays at random locations inside the pixel
 
-
+                pixel_color = get_color(generated_ray)
                 self.camera.write_to_film(i, j, pixel_color)
                 renderbar.update(k)
                 k = k+1
