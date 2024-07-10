@@ -13,8 +13,8 @@ The codes were rewritten and modified from https://raytracing.github.io/books/Ra
 
 **Class assignment**
 
-1. Modify 'find_intersection()' to render a square with various sizes and locations using different 't' and 'Interval'. 
-2. Modify 'find_intersection()' to render 3 squares with various sizes and locations.
-3. Replace 'get_center_ray()' with 'get_ray()'. Explain the differences between (2.) and (3.).
-4. Generate random rays at the same pixel using 'get_ray()' and 'samples_per_pixel'. The result from 'get_color()' is then accumulated to 'pixel_color' and scaled in 'write_to_film()'. See the difference between (3.) and (4.).
+1. Modify 'find_intersection()' to render a square with various sizes and locations using different 't' and 'Interval'. Save your render result as "week03-1.png". Submit the rendered image and your modified code.
+2. Modify 'find_intersection()' to render 3 squares with various sizes and locations. Save your render result as "week03-2.png". Submit the rendered image and your modified code.
+3. Replace 'get_center_ray()' with 'get_ray()'. Render the result. Save your render result as "week03-3.png". Explain the differences between (2.) and (3.). Additional please submit the rendered image.
+4. Generate random rays at the same pixel using 'get_ray()' and 'samples_per_pixel'. The result from 'get_color()' is then accumulated to 'pixel_color' and scaled in 'write_to_film()'. See the difference between (3.) and (4.). Save your render result as "week03-4.png". Submit the rendered image and your modified code.
 5. Draw Class diagram of the codes.
